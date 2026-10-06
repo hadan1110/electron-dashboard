@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">D</div>
+          <div>
+            <h2>DashHub</h2>
+            <small>Workspace</small>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">Overview</button>
+          <button class="nav-item">Analytics</button>
+          <button class="nav-item">Projects</button>
+          <button class="nav-item">Reports</button>
+          <button class="nav-item">Settings</button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="mini-card">
+            <span>CPU</span>
+            <strong>32%</strong>
+          </div>
+          <div class="mini-card">
+            <span>Memory</span>
+            <strong>68%</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Dashboard</h1>
+          </div>
+
+          <div class="topbar-actions">
+            <button id="themeToggle" class="secondary">Toggle Theme</button>
+            <button id="folderBtn">Open Folder</button>
+          </div>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-card accent">
+            <span class="label">Revenue</span>
+            <strong>$84.2K</strong>
+            <small>+12.4% vs last month</small>
+          </article>
+
+          <article class="stat-card success">
+            <span class="label">Tasks done</span>
+            <strong>1,784</strong>
+            <small>+8.3% productivity</small>
+          </article>
+
+          <article class="stat-card warning">
+            <span class="label">Open tickets</span>
+            <strong>64</strong>
+            <small>12 need review</small>
+          </article>
+
+          <article class="stat-card info">
+            <span class="label">Uptime</span>
+            <strong>99.95%</strong>
+            <small>Stable all week</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel chart-panel">
+            <div class="panel-header">
+              <h3>Traffic</h3>
+              <span class="chip">This month</span>
+            </div>
+
+            <div class="chart">
+              <div class="bar-group">
+                <div class="bar" style="--value: 36%"></div>
+                <label>Jan</label>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--value: 50%"></div>
+                <label>Feb</label>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--value: 68%"></div>
+                <label>Mar</label>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--value: 56%"></div>
+                <label>Apr</label>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--value: 82%"></div>
+                <label>May</label>
+              </div>
+              <div class="bar-group">
+                <div class="bar" style="--value: 74%"></div>
+                <label>Jun</label>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h3>System Info</h3>
+            </div>
+
+            <div class="info-list">
+              <div>
+                <span>App</span>
+                <strong id="app-name">-</strong>
+              </div>
+              <div>
+                <span>Version</span>
+                <strong id="app-version">-</strong>
+              </div>
+              <div>
+                <span>Platform</span>
+                <strong id="app-platform">-</strong>
+              </div>
+              <div>
+                <span>Arch</span>
+                <strong id="app-arch">-</strong>
+              </div>
+              <div>
+                <span>User Data</span>
+                <strong id="app-user-data">-</strong>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="bottom-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Recent Activity</h3>
+            </div>
+
+            <ul class="activity-list">
+              <li>
+                <span class="dot green"></span>
+                <div>
+                  <strong>New user registration</strong>
+                  <small>2 minutes ago</small>
+                </div>
+              </li>
+              <li>
+                <span class="dot blue"></span>
+                <div>
+                  <strong>Deployment succeeded</strong>
+                  <small>18 minutes ago</small>
+                </div>
+              </li>
+              <li>
+                <span class="dot amber"></span>
+                <div>
+                  <strong>Queue alert reviewed</strong>
+                  <small>1 hour ago</small>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Projects</h3>
+            </div>
+
+            <table class="project-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Progress</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Platform UI</td>
+                  <td><span class="badge success">Live</span></td>
+                  <td>86%</td>
+                </tr>
+                <tr>
+                  <td>Analytics API</td>
+                  <td><span class="badge warning">Review</span></td>
+                  <td>62%</td>
+                </tr>
+                <tr>
+                  <td>Migration</td>
+                  <td><span class="badge info">Queued</span></td>
+                  <td>34%</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
